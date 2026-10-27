@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Faster-Whisper Command Builder</title>
+  <title>TranscribeBuddy</title>
   <style>
     :root {
       color-scheme: light;
@@ -278,7 +278,7 @@
 </head>
 <body>
   <header>
-    <h1>Faster-Whisper Command Builder</h1>
+    <h1>TranscribeBuddy</h1>
     <p class="subhead">Choose the options, then copy the generated PowerShell command.</p>
   </header>
 
@@ -437,7 +437,7 @@
               <input id="enableDiarization" type="checkbox">
               <label for="enableDiarization">Identify multiple speakers with pyannote</label>
             </div>
-            <div class="hint">Uses the separate faster-whisper-diarization environment, then writes speaker-labeled output such as SPEAKER_00 and SPEAKER_01. Leave this off for normal faster-whisper transcript commands.</div>
+            <div class="hint">Uses the separate TranscribeBuddy-diarization environment, then writes speaker-labeled output such as SPEAKER_00 and SPEAKER_01. Leave this off for normal Faster-Whisper transcript commands.</div>
           </div>
           <div>
             <label for="speakerPreset">Speaker count</label>
@@ -498,7 +498,7 @@
 
     <aside aria-label="Generated command">
       <strong>Generated PowerShell</strong>
-      <div class="hint">After clicking Copy command, paste the whole command into Windows PowerShell and press Enter.<br>For normal transcription, paste the full block: it starts with $env:PATH, then $Code = @', and ends with $Code | &amp; "...python.exe" -.<br>For diarization, the command calls the separate faster-whisper-diarization runner and expects that setup to already exist.<br>The prompt should start with PS, for example PS C:\Users\YourName&gt;. If it only shows C:\WINDOWS\system32&gt;, that is Command Prompt and this PowerShell command will not run correctly.</div>
+      <div class="hint">After clicking Copy command, paste the whole command into Windows PowerShell and press Enter.<br>For normal transcription, paste the full block: it starts with $env:PATH, then $Code = @', and ends with $Code | &amp; "...python.exe" -.<br>For diarization, the command calls the separate TranscribeBuddy-diarization runner and expects that setup to already exist.<br>The prompt should start with PS, for example PS C:\Users\YourName&gt;. If it only shows C:\WINDOWS\system32&gt;, that is Command Prompt and this PowerShell command will not run correctly.</div>
       <div class="summary" id="summary"></div>
       <div class="actions">
         <button id="copyButton" type="button">Copy command</button>
@@ -511,10 +511,10 @@
   </main>
 
   <script>
-    const PYTHON_PATH = String.raw`C:\Users\YourName\Desktop\Tools\faster-whisper\faster-whisper\Scripts\python.exe`;
-    const DIARIZE_ROOT = String.raw`C:\Users\YourName\Desktop\Tools\faster-whisper-diarization`;
-    const DIARIZE_PYTHON_PATH = String.raw`C:\Users\YourName\Desktop\Tools\faster-whisper-diarization\.venv\Scripts\python.exe`;
-    const DIARIZE_SCRIPT_PATH = String.raw`C:\Users\YourName\Desktop\Tools\faster-whisper-diarization\diarize_with_faster_whisper.py`;
+    const PYTHON_PATH = String.raw`C:\Users\YourName\Desktop\Tools\TranscribeBuddy-faster-whisper\.venv\Scripts\python.exe`;
+    const DIARIZE_ROOT = String.raw`C:\Users\YourName\Desktop\Tools\TranscribeBuddy-diarization`;
+    const DIARIZE_PYTHON_PATH = String.raw`C:\Users\YourName\Desktop\Tools\TranscribeBuddy-diarization\.venv\Scripts\python.exe`;
+    const DIARIZE_SCRIPT_PATH = String.raw`C:\Users\YourName\Desktop\Tools\TranscribeBuddy-diarization\diarize_with_faster_whisper.py`;
 
     const defaults = {
       inputMode: "single",
@@ -589,11 +589,11 @@
 
     function getModelPath() {
       const modelPaths = {
-        "small": String.raw`C:\Users\YourName\Desktop\Tools\faster-whisper\models\small`,
-        "medium": String.raw`C:\Users\YourName\Desktop\Tools\faster-whisper\models\medium`,
-        "large-v3": String.raw`C:\Users\YourName\Desktop\Tools\faster-whisper\models\large-v3`,
-        "large-v3-turbo": String.raw`C:\Users\YourName\Desktop\Tools\faster-whisper\models\large-v3-turbo`,
-        "distill-large-v3.5-eng-only": String.raw`C:\Users\YourName\Desktop\Tools\faster-whisper\models\distil-large-v3.5`
+        "small": String.raw`C:\Users\YourName\Desktop\Tools\TranscribeBuddy-faster-whisper\models\small`,
+        "medium": String.raw`C:\Users\YourName\Desktop\Tools\TranscribeBuddy-faster-whisper\models\medium`,
+        "large-v3": String.raw`C:\Users\YourName\Desktop\Tools\TranscribeBuddy-faster-whisper\models\large-v3`,
+        "large-v3-turbo": String.raw`C:\Users\YourName\Desktop\Tools\TranscribeBuddy-faster-whisper\models\large-v3-turbo`,
+        "distill-large-v3.5-eng-only": String.raw`C:\Users\YourName\Desktop\Tools\TranscribeBuddy-faster-whisper\models\distil-large-v3.5`
       };
 
       return modelPaths[el.modelName.value] || modelPaths["medium"];

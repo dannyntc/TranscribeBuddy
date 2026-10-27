@@ -1,8 +1,8 @@
-# <span style="color:#2563eb">Faster-Whisper CPU Plug-and-Play Manual</span>
+# <span style="color:#2563eb">TranscribeBuddy CPU Plug-and-Play Manual</span>
 
 <blockquote>
-<b>Matches:</b> <code>C:\Users\YourName\Desktop\faster-whisper-command-builder\faster-whisper-command-builder.html</code><br>
-<b>For:</b> Windows setup at <code>C:\Users\YourName\Desktop\Tools\faster-whisper\faster-whisper</code><br>
+<b>Matches:</b> <code>C:\Users\YourName\Desktop\TranscribeBuddy\TranscribeBuddy.html</code><br>
+<b>For:</b> Windows setup at <code>C:\Users\YourName\Desktop\Tools\TranscribeBuddy-faster-whisper</code><br>
 <b>Installed version checked:</b> <code>faster-whisper 1.2.1</code><br>
 <b>Default mode:</b> <code>device="cpu"</code>, <code>compute_type="int8"</code>, <code>model="medium"</code><br>
 <b>Main official docs:</b> <a href="https://github.com/SYSTRAN/faster-whisper">https://github.com/SYSTRAN/faster-whisper</a>
@@ -36,7 +36,7 @@ Use this CPU manual when you want the safest command path and do not want CUDA/G
 Open PowerShell. Change only `$Audio` if your file is not here:
 
 ```powershell
-$Python = "C:\Users\YourName\Desktop\Tools\faster-whisper\faster-whisper\Scripts\python.exe"
+$Python = "C:\Users\YourName\Desktop\Tools\TranscribeBuddy-faster-whisper\.venv\Scripts\python.exe"
 $Audio = "C:\Users\YourName\Desktop\audio.mp3"
 ```
 
@@ -61,7 +61,7 @@ The command builder uses local model folders. Copy exactly one block.
 This matches the command builder default.
 
 ```powershell
-$ModelName = "C:\Users\YourName\Desktop\Tools\faster-whisper\models\medium"
+$ModelName = "C:\Users\YourName\Desktop\Tools\TranscribeBuddy-faster-whisper\models\medium"
 $Device = "cpu"
 $ComputeType = "int8"
 ```
@@ -69,7 +69,7 @@ $ComputeType = "int8"
 ### Faster Draft
 
 ```powershell
-$ModelName = "C:\Users\YourName\Desktop\Tools\faster-whisper\models\small"
+$ModelName = "C:\Users\YourName\Desktop\Tools\TranscribeBuddy-faster-whisper\models\small"
 $Device = "cpu"
 $ComputeType = "int8"
 ```
@@ -77,7 +77,7 @@ $ComputeType = "int8"
 ### Faster Large-Style Model
 
 ```powershell
-$ModelName = "C:\Users\YourName\Desktop\Tools\faster-whisper\models\large-v3-turbo"
+$ModelName = "C:\Users\YourName\Desktop\Tools\TranscribeBuddy-faster-whisper\models\large-v3-turbo"
 $Device = "cpu"
 $ComputeType = "int8"
 ```
@@ -85,7 +85,7 @@ $ComputeType = "int8"
 ### Highest Accuracy
 
 ```powershell
-$ModelName = "C:\Users\YourName\Desktop\Tools\faster-whisper\models\large-v3"
+$ModelName = "C:\Users\YourName\Desktop\Tools\TranscribeBuddy-faster-whisper\models\large-v3"
 $Device = "cpu"
 $ComputeType = "int8"
 ```
@@ -95,7 +95,7 @@ $ComputeType = "int8"
 Use this for English transcription, not translation workflows.
 
 ```powershell
-$ModelName = "C:\Users\YourName\Desktop\Tools\faster-whisper\models\distil-large-v3.5"
+$ModelName = "C:\Users\YourName\Desktop\Tools\TranscribeBuddy-faster-whisper\models\distil-large-v3.5"
 $Device = "cpu"
 $ComputeType = "int8"
 ```
@@ -238,10 +238,10 @@ print("Saved output to:", out)
 ## <span style="color:#16a34a">7. Complete Default Example</span>
 
 ```powershell
-$Python = "C:\Users\YourName\Desktop\Tools\faster-whisper\faster-whisper\Scripts\python.exe"
+$Python = "C:\Users\YourName\Desktop\Tools\TranscribeBuddy-faster-whisper\.venv\Scripts\python.exe"
 $Audio = "C:\Users\YourName\Desktop\audio.mp3"
 
-$ModelName = "C:\Users\YourName\Desktop\Tools\faster-whisper\models\medium"
+$ModelName = "C:\Users\YourName\Desktop\Tools\TranscribeBuddy-faster-whisper\models\medium"
 $Device = "cpu"
 $ComputeType = "int8"
 $OutputSuffix = ".txt"

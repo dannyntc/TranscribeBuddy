@@ -1,22 +1,22 @@
 # Changelog
 
-All notable local changes for the Faster-Whisper command builder, its HTML file, and related manuals are recorded here.
+All notable local changes for TranscribeBuddy, its HTML file, and related manuals are recorded here.
 
 ## 2026-06-29
 
 ### Organized Project Files
 
 - Created a dedicated folder:
-  - `C:\Users\YourName\Desktop\faster-whisper-command-builder`
+  - `C:\Users\YourName\Desktop\TranscribeBuddy`
 - Moved the related files into that folder:
-  - `faster-whisper-command-builder.html`
-  - `faster-whisper-plug-and-play-manual CPU.md`
-  - `faster-whisper-plug-and-play-manual-GPU.md`
-  - `changelog-faster-whisper-command-builder.md`
+  - `TranscribeBuddy.html`
+  - `TranscribeBuddy-CPU-Manual.md`
+  - `TranscribeBuddy-GPU-Manual.md`
+  - `TranscribeBuddy-Changelog.md`
 - Moved the HTML file from:
-  - `C:\Users\YourName\Desktop\faster-whisper-command-builder.html`
+  - `C:\Users\YourName\Desktop\TranscribeBuddy.html`
 - To:
-  - `C:\Users\YourName\Desktop\faster-whisper-command-builder\faster-whisper-command-builder.html`
+  - `C:\Users\YourName\Desktop\TranscribeBuddy\TranscribeBuddy.html`
 - Updated both manuals so their `Matches:` line points to the HTML file in the new folder.
 
 ### Command Builder CPU Defaults
@@ -32,7 +32,7 @@ All notable local changes for the Faster-Whisper command builder, its HTML file,
 
 ### CPU Manual
 
-- Rewrote `faster-whisper-plug-and-play-manual CPU.md` to match the current command builder defaults.
+- Rewrote `TranscribeBuddy-CPU-Manual.md` to match the current command builder defaults.
 - Documented the builder's default transcription setup:
   - Device: `cpu`
   - Model: `medium`
@@ -47,7 +47,7 @@ All notable local changes for the Faster-Whisper command builder, its HTML file,
 
 ### GPU Manual
 
-- Rewrote `faster-whisper-plug-and-play-manual-GPU.md` so it no longer presents GPU as the default path.
+- Rewrote `TranscribeBuddy-GPU-Manual.md` so it no longer presents GPU as the default path.
 - Clarified that the command builder now defaults to CPU and GPU is an intentional override.
 - Kept GPU instructions available for CUDA use with:
   - Device: `cuda`
@@ -74,7 +74,7 @@ All notable local changes for the Faster-Whisper command builder, its HTML file,
 
 ### Same-Folder Output Default
 
-- Updated `faster-whisper-command-builder.html` so generated transcription output is saved beside the input file by default.
+- Updated `TranscribeBuddy.html` so generated transcription output is saved beside the input file by default.
 - Updated the single-file hint to say the generated command saves output beside the input file.
 - Updated the multi-file hint to say each output is saved beside its matching input file.
 - Confirmed output-writing logic uses the input path and changes only the suffix:
@@ -102,7 +102,7 @@ All notable local changes for the Faster-Whisper command builder, its HTML file,
 
 ### Diarization Workflow
 
-- Added optional Pyannote diarization support to `faster-whisper-command-builder.html`.
+- Added optional Pyannote diarization support to `TranscribeBuddy.html`.
 - Added controls for:
   - Enabling diarization
   - Speaker count mode
@@ -113,8 +113,8 @@ All notable local changes for the Faster-Whisper command builder, its HTML file,
   - Hugging Face token
   - Diarization output folder
 - Generated diarization commands call the separate environment:
-  - `C:\Users\YourName\Desktop\Tools\faster-whisper-diarization\.venv\Scripts\python.exe`
-  - `C:\Users\YourName\Desktop\Tools\faster-whisper-diarization\diarize_with_faster_whisper.py`
+  - `C:\Users\YourName\Desktop\Tools\TranscribeBuddy-diarization\.venv\Scripts\python.exe`
+  - `C:\Users\YourName\Desktop\Tools\TranscribeBuddy-diarization\diarize_with_faster_whisper.py`
 - Added generated flags for:
   - `--model`
   - `--device`
@@ -147,8 +147,8 @@ All notable local changes for the Faster-Whisper command builder, its HTML file,
 
 - Verified the HTML is self-contained and does not depend on external CDN/script/link/http imports.
 - Kept runtime dependencies outside the HTML:
-  - faster-whisper environment
-  - faster-whisper-diarization environment
+  - TranscribeBuddy-faster-whisper environment
+  - TranscribeBuddy-diarization environment
   - Hugging Face token/model access
   - Local model folders
 
@@ -168,7 +168,7 @@ All notable local changes for the Faster-Whisper command builder, its HTML file,
 
 ### Command Builder Creation
 
-- Created `faster-whisper-command-builder.html` as a standalone local HTML/CSS/JavaScript command builder.
+- Created `TranscribeBuddy.html` as a standalone local HTML/CSS/JavaScript command builder.
 - Built the first version from the CPU and GPU manuals found on the Desktop.
 - Added a two-column UI with:
   - Input controls on the left

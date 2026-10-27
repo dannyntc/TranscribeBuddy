@@ -1,4 +1,4 @@
-# faster-whisper-command-builder
+# TranscribeBuddy
 
 A lightweight, browser-based toolkit for generating copy-ready Windows PowerShell commands for Faster-Whisper transcription, translation, subtitle generation, and speaker diarization.
 

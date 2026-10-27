@@ -1,8 +1,8 @@
-# <span style="color:#2563eb">Faster-Whisper GPU Plug-and-Play Manual</span>
+# <span style="color:#2563eb">TranscribeBuddy GPU Plug-and-Play Manual</span>
 
 <blockquote>
-<b>Matches:</b> <code>C:\Users\YourName\Desktop\faster-whisper-command-builder\faster-whisper-command-builder.html</code><br>
-<b>For:</b> Windows setup at <code>C:\Users\YourName\Desktop\Tools\faster-whisper\faster-whisper</code><br>
+<b>Matches:</b> <code>C:\Users\YourName\Desktop\TranscribeBuddy\TranscribeBuddy.html</code><br>
+<b>For:</b> Windows setup at <code>C:\Users\YourName\Desktop\Tools\TranscribeBuddy-faster-whisper</code><br>
 <b>Installed version checked:</b> <code>faster-whisper 1.2.1</code><br>
 <b>GPU profile:</b> <code>NVIDIA GeForce GTX 1050, 3 GB VRAM</code><br>
 <b>Important:</b> The command builder now defaults to CPU. Use this manual only when you intentionally choose GPU.<br>
@@ -35,7 +35,7 @@ On a 3 GB GTX 1050, `medium`, `large-v3-turbo`, `large-v3`, and `distill-large-v
 Open PowerShell. Change only `$Audio` if your file is somewhere else:
 
 ```powershell
-$Python = "C:\Users\YourName\Desktop\Tools\faster-whisper\faster-whisper\Scripts\python.exe"
+$Python = "C:\Users\YourName\Desktop\Tools\TranscribeBuddy-faster-whisper\.venv\Scripts\python.exe"
 $Audio = "C:\Users\YourName\Desktop\audio.mp3"
 ```
 
@@ -48,7 +48,7 @@ $Audio = "C:\Users\YourName\Desktop\audio.mp3"
 This keeps the builder's model default but changes the device to CUDA.
 
 ```powershell
-$ModelName = "C:\Users\YourName\Desktop\Tools\faster-whisper\models\medium"
+$ModelName = "C:\Users\YourName\Desktop\Tools\TranscribeBuddy-faster-whisper\models\medium"
 $Device = "cuda"
 $ComputeType = "int8"
 ```
@@ -58,7 +58,7 @@ $ComputeType = "int8"
 Use this if `medium` gives a GPU memory error.
 
 ```powershell
-$ModelName = "C:\Users\YourName\Desktop\Tools\faster-whisper\models\small"
+$ModelName = "C:\Users\YourName\Desktop\Tools\TranscribeBuddy-faster-whisper\models\small"
 $Device = "cuda"
 $ComputeType = "int8"
 ```
@@ -66,19 +66,19 @@ $ComputeType = "int8"
 ### Larger Models To Try Carefully
 
 ```powershell
-$ModelName = "C:\Users\YourName\Desktop\Tools\faster-whisper\models\large-v3-turbo"
+$ModelName = "C:\Users\YourName\Desktop\Tools\TranscribeBuddy-faster-whisper\models\large-v3-turbo"
 $Device = "cuda"
 $ComputeType = "int8"
 ```
 
 ```powershell
-$ModelName = "C:\Users\YourName\Desktop\Tools\faster-whisper\models\large-v3"
+$ModelName = "C:\Users\YourName\Desktop\Tools\TranscribeBuddy-faster-whisper\models\large-v3"
 $Device = "cuda"
 $ComputeType = "int8"
 ```
 
 ```powershell
-$ModelName = "C:\Users\YourName\Desktop\Tools\faster-whisper\models\distil-large-v3.5"
+$ModelName = "C:\Users\YourName\Desktop\Tools\TranscribeBuddy-faster-whisper\models\distil-large-v3.5"
 $Device = "cuda"
 $ComputeType = "int8"
 ```
